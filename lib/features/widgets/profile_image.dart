@@ -28,14 +28,14 @@ class _ProfileImageWidgetState extends State<ProfileImageWidget> {
         child: AnimatedContainer(
           margin: const EdgeInsets.only(right: 50),
           duration: const Duration(milliseconds: 300),
-          transform: Matrix4.rotationZ(isHovered ? 0 : math.pi / 25),
+          transform: Matrix4.rotationZ(isHovered ? 0 : math.pi / 36),
           height: widget.size.width * 0.25,
           width: widget.size.width * 0.25,
           decoration: BoxDecoration(
             border: Border.all(width: 2, color: AppColors.studio),
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             image: const DecorationImage(
-              image: AssetImage(Assets.profileNewImage),
+              image: AssetImage(Assets.projectImage2),
               fit: BoxFit.fill,
             ),
           ),
