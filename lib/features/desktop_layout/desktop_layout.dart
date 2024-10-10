@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/widgets/download_cv_social_media_container.dart';
+import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -32,7 +33,8 @@ class DesktopLayout extends StatelessWidget {
                         DownloadCvAndSocialMediaCustomContainer(size: size)
                       ],
                     ),
-                  )
+                  ),
+                  ProfileImageWidget(size: size)
                 ],
               )
             ],
