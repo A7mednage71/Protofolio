@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -13,14 +14,16 @@ class ProfileMainDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: size.width < SizeConfig.tablet
+          ? CrossAxisAlignment.center
+          : CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("I am Nageh",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 26,
-                fontWeight: FontWeight.bold)),
+        const Text(
+          "I am Nageh",
+          style: TextStyle(
+              color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold),
+        ),
         GradientText(
           "Mobile App Developer +\nFlutter Developer",
           colors: const [AppColors.studio, AppColors.paleSlate],
@@ -29,15 +32,21 @@ class ProfileMainDetails extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontFamily: 'Poppins',
           ),
+          textAlign: size.width < SizeConfig.tablet
+              ? TextAlign.center
+              : TextAlign.start,
         ),
         SizedBox(
           height: size.height * 0.05,
         ),
         SizedBox(
           width: size.width * 0.5,
-          child: const Text(
+          child: Text(
             "Enthusiastic Junior Flutter Developer with a solid foundation in mobile\napp development and a passion for creating engaging user experiences and experienced\nin building cross-platform applications with Flutter framework.",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: const TextStyle(color: Colors.white, fontSize: 16),
+            textAlign: size.width < SizeConfig.tablet
+                ? TextAlign.center
+                : TextAlign.start,
           ),
         )
       ],
