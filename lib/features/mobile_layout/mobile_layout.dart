@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
+import 'package:portfolio/features/mobile_layout/widgets/count_widgets_list_mobile.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
@@ -39,7 +40,8 @@ class MobileLayout extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              CountWidgetsListMobile(size: size),
             ],
           ),
         ),
