@@ -30,7 +30,7 @@ class DesktopLayout extends StatelessWidget {
                       children: [
                         ProfileMainDetails(size: size),
                         SizedBox(height: size.height * 0.05),
-                        DownloadCvAndSocialMediaCustomContainer(size: size)
+                        DownloadCvAndSocialMediaDesktopContainer(size: size)
                       ],
                     ),
                   ),

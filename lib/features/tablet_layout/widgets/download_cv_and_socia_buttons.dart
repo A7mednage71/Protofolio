@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/features/widgets/download_cv_button.dart';
 import 'package:portfolio/features/widgets/social_media_buttons.dart';
 
-class DownloadCvAndSocialMediaDesktopContainer extends StatelessWidget {
-  const DownloadCvAndSocialMediaDesktopContainer({
+class DownloadCvAndSocialMediaTabletContainer extends StatelessWidget {
+  const DownloadCvAndSocialMediaTabletContainer({
     super.key,
     required this.size,
   });
@@ -12,9 +12,12 @@ class DownloadCvAndSocialMediaDesktopContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         DownloadCvButton(),
+        SizedBox(height: 20),
         SocialMediaButtons(),
       ],
     );
