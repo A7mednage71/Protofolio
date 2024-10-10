@@ -1,13 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/utils/app_styles.dart';
+import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
+import 'package:portfolio/features/widgets/profile_image.dart';
+import 'package:portfolio/features/widgets/profile_main_details.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Mobile Layout'),
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: AppStyles.gradientBackground,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 40),
+              ProfileImageWidget(size: size),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: EdgeInsets.symmetric(
+                      vertical: size.height * 0.10,
+                      horizontal: size.width * 0.07,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ProfileMainDetails(size: size),
+                        SizedBox(height: size.height * 0.05),
+                        DownloadCvAndSocialMediaTabletContainer(size: size)
+                      ],
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

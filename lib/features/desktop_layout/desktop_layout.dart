@@ -34,7 +34,7 @@ class DesktopLayout extends StatelessWidget {
                       ],
                     ),
                   ),
-                  ProfileImageWidget(size: size)
+                  Expanded(child: ProfileImageWidget(size: size))
                 ],
               )
             ],
