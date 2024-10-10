@@ -5,7 +5,7 @@ import 'package:portfolio/features/homepage.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) => const MyApp(),
     ),
   );
