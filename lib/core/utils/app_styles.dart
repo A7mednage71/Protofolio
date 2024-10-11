@@ -10,4 +10,12 @@ class AppStyles {
       ],
     ),
   );
+  static const BoxDecoration gradientServiceBackground = BoxDecoration(
+    gradient: LinearGradient(
+      colors: [
+        AppColors.studio,
+        AppColors.valhalla,
+      ],
+    ),
+  );
 }

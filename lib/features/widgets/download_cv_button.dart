@@ -21,7 +21,7 @@ class DownloadCvButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
           border: Border.all(
             width: 1,
-            color: AppColors.studio,
+            color: AppColors.paleSlate,
           ),
         ),
         child: const Row(
@@ -30,13 +30,13 @@ class DownloadCvButton extends StatelessWidget {
             Text(
               "Download CV ",
               style: TextStyle(
-                  color: AppColors.studio,
+                  color: AppColors.paleSlate,
                   fontWeight: FontWeight.bold,
                   fontSize: 16),
             ),
             Icon(
               Icons.download,
-              color: AppColors.studio,
+              color: AppColors.paleSlate,
               size: 16,
             )
           ],
