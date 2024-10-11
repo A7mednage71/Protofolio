@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/mobile_layout/widgets/count_widgets_list_mobile.dart';
+import 'package:portfolio/features/mobile_layout/widgets/quality_service_mobile_items_list.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
+import 'package:portfolio/features/widgets/quality_service_top_widget.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
@@ -42,6 +45,16 @@ class MobileLayout extends StatelessWidget {
                 ],
               ),
               CountWidgetsListMobile(size: size),
+              SizedBox(height: size.height * 0.07),
+              Container(
+                height: size.height * 1.31,
+                width: double.infinity,
+                color: AppColors.ebony,
+                child: Column(children: [
+                  QualityServiceTopWidget(size: size),
+                  QualityServiceMobileListItems(size: size),
+                ]),
+              )
             ],
           ),
         ),
