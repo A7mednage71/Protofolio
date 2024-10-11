@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
 import 'package:portfolio/features/widgets/count_widgets_list.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
+import 'package:portfolio/features/widgets/quality_service_list_items.dart';
+import 'package:portfolio/features/widgets/quality_service_top_widget.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});
@@ -39,6 +42,16 @@ class TabletLayout extends StatelessWidget {
                 ],
               ),
               CountWidgetsList(size: size),
+              SizedBox(height: size.height * 0.07),
+              Container(
+                height: size.height,
+                width: double.infinity,
+                color: AppColors.ebony,
+                child: Column(children: [
+                  QualityServiceTopWidget(size: size),
+                  QualityServiceListItems(size: size),
+                ]),
+              )
             ],
           ),
         ),

@@ -56,7 +56,7 @@ class _QualityServiceItemState extends State<QualityServiceItem> {
                         color: Colors.white,
                         fontSize: widget.size.width * 0.025,
                         fontWeight: FontWeight.bold,
-                        overflow: TextOverflow.clip,
+                        // overflow: TextOverflow.clip,
                       ),
                     ),
                   ),
@@ -69,8 +69,6 @@ class _QualityServiceItemState extends State<QualityServiceItem> {
               child: Text(
                 widget.item.value.description,
                 style: const TextStyle(color: Colors.white),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
               ),
             ),
             SizedBox(width: widget.size.width * 0.01),
