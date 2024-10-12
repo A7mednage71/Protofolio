@@ -34,6 +34,7 @@ class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
         width: double.infinity,
         decoration: isHovered ? AppStyles.gradientServiceBackground : null,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "0${widget.item.key + 1}",
@@ -43,7 +44,7 @@ class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
                 fontSize: widget.size.width * 0.040,
               ),
             ),
-            SizedBox(width: widget.size.height * 0.01),
+            SizedBox(height: widget.size.height * 0.01),
             Text(
               widget.item.value.title,
               style: TextStyle(
@@ -53,7 +54,7 @@ class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
                 // overflow: TextOverflow.clip,
               ),
             ),
-            SizedBox(width: widget.size.height * 0.01),
+            SizedBox(height: widget.size.height * 0.01),
             Text(
               widget.item.value.description,
               style: const TextStyle(color: Colors.white),
@@ -61,7 +62,7 @@ class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
             ),
-            SizedBox(width: widget.size.height * 0.01),
+            SizedBox(height: widget.size.height * 0.006),
             Icon(
               isHovered
                   ? FontAwesomeIcons.arrowTrendUp
