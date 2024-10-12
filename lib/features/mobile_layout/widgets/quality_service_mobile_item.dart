@@ -55,12 +55,14 @@ class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
               ),
             ),
             SizedBox(height: widget.size.height * 0.01),
-            Text(
-              widget.item.value.description,
-              style: const TextStyle(color: Colors.white),
-              textAlign: TextAlign.center,
-              maxLines: 3,
-              overflow: TextOverflow.ellipsis,
+            Flexible(
+              child: Text(
+                widget.item.value.description,
+                style: const TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
+                // maxLines: 3,
+                // overflow: TextOverflow.ellipsis,
+              ),
             ),
             SizedBox(height: widget.size.height * 0.006),
             Icon(
