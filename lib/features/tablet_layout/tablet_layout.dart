@@ -3,6 +3,8 @@ import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
 import 'package:portfolio/features/widgets/count_widgets_list.dart';
+import 'package:portfolio/features/widgets/my_recent_work_tab_bar.dart';
+import 'package:portfolio/features/widgets/my_recent_work_top_widget.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
 import 'package:portfolio/features/widgets/quality_service_list_items.dart';
@@ -44,14 +46,26 @@ class TabletLayout extends StatelessWidget {
               CountWidgetsList(size: size),
               SizedBox(height: size.height * 0.07),
               Container(
-                height: size.height,
                 width: double.infinity,
                 color: AppColors.ebony,
                 child: Column(children: [
                   QualityServiceTopWidget(size: size),
                   QualityServiceListItems(size: size),
                 ]),
-              )
+              ),
+              SizedBox(
+                  height: size.height * 0.07,
+                  child: Container(color: AppColors.ebony)),
+              Container(
+                width: double.infinity,
+                color: AppColors.ebony,
+                child: Column(children: [
+                  MyRecentWorksTopWidget(size: size),
+                  SizedBox(height: size.height * 0.03),
+                  MyRecentWorksTabBar(size: size),
+                  SizedBox(height: size.height * 0.07), // will remove
+                ]),
+              ),
             ],
           ),
         ),

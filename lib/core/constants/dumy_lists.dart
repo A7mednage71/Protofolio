@@ -28,4 +28,40 @@ class DumyLists {
         description:
             "ntegrating secure payment gateways like Stripe and PayPal into Flutter apps, making in-app transactions simple and secure"),
   ];
+
+  static List<RecentWorkModel> myRecentWorks = [
+    RecentWorkModel(
+        title: "Web Development",
+        type: "Web Development",
+        projectAsset: "assets/images/portfolio.png",
+        projectLink: "https://www.google.com/"),
+    RecentWorkModel(
+        title: "Android Development",
+        type: "Android Development",
+        projectAsset: "assets/images/portfolio.png",
+        projectLink: "https://www.google.com/"),
+    RecentWorkModel(
+        title: "Flutter Development",
+        type: "Flutter Development",
+        projectAsset: "assets/images/portfolio.png",
+        projectLink: "https://www.google.com/"),
+    RecentWorkModel(
+        title: "Android Development",
+        type: "Android Development",
+        projectAsset: "assets/images/portfolio.png",
+        projectLink: "https://www.google.com/"),
+  ];
+}
+
+class RecentWorkModel {
+  final String title;
+  final String projectAsset;
+  final String type;
+  final String projectLink;
+
+  RecentWorkModel(
+      {required this.title,
+      required this.projectAsset,
+      required this.type,
+      required this.projectLink});
 }
