@@ -1,5 +1,7 @@
 import 'package:portfolio/core/models/count_widget_model.dart';
+import 'package:portfolio/core/models/experience_education_model.dart';
 import 'package:portfolio/core/models/quality_service_model.dart';
+import 'package:portfolio/core/models/recent_work_model.dart';
 
 class DumyLists {
   static List<CountWidgetModel> countItems = [
@@ -46,22 +48,56 @@ class DumyLists {
         projectAsset: "assets/images/portfolio.png",
         projectLink: "https://www.google.com/"),
     RecentWorkModel(
-        title: "Android Development",
-        type: "Android Development",
-        projectAsset: "assets/images/portfolio.png",
-        projectLink: "https://www.google.com/"),
+      title: "Android Development",
+      type: "Android Development",
+      projectAsset: "assets/images/portfolio.png",
+      projectLink: "https://www.google.com/",
+    ),
   ];
-}
 
-class RecentWorkModel {
-  final String title;
-  final String projectAsset;
-  final String type;
-  final String projectLink;
+  static List<ExperienceOrEducationModel> experienceList = [
+    ExperienceOrEducationModel(
+        title: "Flutter Development",
+        startyear: "2022",
+        endYear: "Present",
+        locationOrPosition: "sohag,tema"),
+    ExperienceOrEducationModel(
+        title: "Flutter Development",
+        startyear: "2020",
+        endYear: "2024",
+        locationOrPosition: "sohag,tema"),
+    ExperienceOrEducationModel(
+        title: "Flutter Development",
+        startyear: "2020",
+        endYear: "2024",
+        locationOrPosition: "persons,new york"),
+    ExperienceOrEducationModel(
+        title: "Flutter Development",
+        startyear: "2020",
+        endYear: "2024",
+        locationOrPosition: "Blockchain,london"),
+  ];
 
-  RecentWorkModel(
-      {required this.title,
-      required this.projectAsset,
-      required this.type,
-      required this.projectLink});
+  static List<ExperienceOrEducationModel> educationList = [
+    ExperienceOrEducationModel(
+        title: "Programming Cource",
+        startyear: "2022",
+        endYear: "Present",
+        locationOrPosition: "sohag,tema"),
+    ExperienceOrEducationModel(
+        title: "Design Cource",
+        startyear: "2020",
+        endYear: "2024",
+        locationOrPosition: "sohag,tema"),
+    ExperienceOrEducationModel(
+        title: "Flutter Cource",
+        startyear: "2020",
+        endYear: "2024",
+        locationOrPosition: "persons,new york"),
+    ExperienceOrEducationModel(
+        title: "Flutter Cource",
+        startyear: "2020",
+        endYear: "2024",
+        locationOrPosition: "Blockchain,london"),
+  ];
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:portfolio/core/constants/dumy_lists.dart';
 import 'package:portfolio/core/constants/size_config.dart';
+import 'package:portfolio/core/models/recent_work_model.dart';
 import 'package:portfolio/core/utils/app_assets.dart';
 import 'package:portfolio/features/widgets/my_work_grid_view_item.dart';
 
