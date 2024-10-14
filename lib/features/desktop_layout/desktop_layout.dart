@@ -3,6 +3,7 @@ import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/widgets/count_widgets_list.dart';
 import 'package:portfolio/features/widgets/download_cv_social_media_container.dart';
+import 'package:portfolio/features/widgets/gradient_custom_text.dart';
 import 'package:portfolio/features/widgets/my_education_section_widget.dart';
 import 'package:portfolio/features/widgets/my_experiene_section_widget.dart';
 import 'package:portfolio/features/widgets/my_recent_work_tab_bar.dart';
@@ -11,6 +12,7 @@ import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
 import 'package:portfolio/features/widgets/quality_service_list_items.dart';
 import 'package:portfolio/features/widgets/quality_service_top_widget.dart';
+import 'package:portfolio/features/widgets/skills_list_generate.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -80,6 +82,26 @@ class DesktopLayout extends StatelessWidget {
                   children: [
                     MyExperienceSectionWidget(size: size),
                     MyEducationSectionWidget(size: size)
+                  ],
+                ),
+              ),
+              SizedBox(
+                  height: size.height * 0.1,
+                  child: Container(color: AppColors.ebony)),
+              Container(
+                width: double.infinity,
+                color: AppColors.ebony,
+                child: Column(
+                  children: [
+                    GradientCustomText(size: size, title: "My Skills"),
+                    SizedBox(height: size.height * 0.05),
+                    const Text(
+                      "My skills in app development allow me to create innovative and efficient solutions. I'm always eager to learn and improve,\nensuring I stay updated with the latest technologies.",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    SizedBox(height: size.height * 0.07),
+                    SkillsListGenerate(size: size),
+                    SizedBox(height: size.height * 0.07),
                   ],
                 ),
               )
