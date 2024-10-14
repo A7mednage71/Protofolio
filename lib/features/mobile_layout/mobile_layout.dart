@@ -4,6 +4,8 @@ import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/mobile_layout/widgets/count_widgets_list_mobile.dart';
 import 'package:portfolio/features/mobile_layout/widgets/quality_service_mobile_items_list.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
+import 'package:portfolio/features/widgets/my_recent_work_tab_bar.dart';
+import 'package:portfolio/features/widgets/my_recent_work_top_widget.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
 import 'package:portfolio/features/widgets/quality_service_top_widget.dart';
@@ -53,6 +55,19 @@ class MobileLayout extends StatelessWidget {
                 child: Column(children: [
                   QualityServiceTopWidget(size: size),
                   QualityServiceMobileListItems(size: size),
+                ]),
+              ),
+              SizedBox(
+                  height: size.height * 0.07,
+                  child: Container(color: AppColors.ebony)),
+              Container(
+                width: double.infinity,
+                color: AppColors.ebony,
+                child: Column(children: [
+                  MyRecentWorksTopWidget(size: size),
+                  SizedBox(height: size.height * 0.03),
+                  MyRecentWorksTabBar(size: size),
+                  SizedBox(height: size.height * 0.07), // will remove
                 ]),
               )
             ],

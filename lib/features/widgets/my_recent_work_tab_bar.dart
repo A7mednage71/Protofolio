@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/dumy_lists.dart';
+import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/features/widgets/my_recent_work_grid_view.dart';
 
@@ -61,7 +62,9 @@ class _MyRecentWorksTabBarState extends State<MyRecentWorksTabBar>
           SizedBox(height: widget.size.height * 0.03),
           SizedBox(
             height: widget.size.height * 0.7,
-            width: widget.size.width * 0.7,
+            width: widget.size.width < SizeConfig.tablet
+                ? widget.size.width * 0.8
+                : widget.size.width * 0.8,
             child: TabBarView(
               controller: _tabController,
               children: [

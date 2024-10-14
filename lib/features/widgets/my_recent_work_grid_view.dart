@@ -12,8 +12,14 @@ class MyRecentWorkGridView extends StatelessWidget {
   final Size size;
   @override
   Widget build(BuildContext context) {
-    double cardHeight = (size.height * 0.7) / 2; // Height of each card
-    double cardWidth = (size.width * 0.7) / 2; // Width of each card
+    double cardHeight = size.height < SizeConfig.tablet
+        ? (size.height * 0.7) / 2
+        : (size.height * 0.6) / 2; // Height of each card
+    double cardWidth = size.width < SizeConfig.tablet
+        ? (size.width) / 1.3
+        : size.width < SizeConfig.desktop
+            ? (size.width * 0.8) / 1.9
+            : (size.width * 0.7) / 2; // Width of each card
 
     if (works.isEmpty) {
       return Center(
