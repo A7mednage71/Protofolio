@@ -15,9 +15,10 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 0,
+      bottom: 10,
+      left: 10,
+      right: 10,
       child: Container(
-        margin: const EdgeInsets.all(10),
         width: width,
         height: height,
         decoration: BoxDecoration(

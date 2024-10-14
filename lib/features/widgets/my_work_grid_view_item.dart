@@ -31,6 +31,7 @@ class _MyWorkGridViewItemState extends State<MyWorkGridViewItem> {
       onEnter: (event) => changeHoveredState(true),
       onExit: (event) => changeHoveredState(false),
       child: Stack(
+        alignment: Alignment.center,
         children: [
           Container(
             decoration: BoxDecoration(
@@ -44,8 +45,8 @@ class _MyWorkGridViewItemState extends State<MyWorkGridViewItem> {
           ),
           if (isHovered)
             MyWorkGridItemHoveredContainer(
-              height: widget.cardHeight * 0.25,
-              width: widget.cardWidth * 0.93,
+              height: widget.cardHeight * 0.3,
+              width: widget.cardWidth,
             ),
         ],
       ),
