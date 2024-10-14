@@ -2,6 +2,8 @@ import 'package:portfolio/core/models/count_widget_model.dart';
 import 'package:portfolio/core/models/experience_education_model.dart';
 import 'package:portfolio/core/models/quality_service_model.dart';
 import 'package:portfolio/core/models/recent_work_model.dart';
+import 'package:portfolio/core/models/skill_model.dart';
+import 'package:portfolio/core/utils/app_assets.dart';
 
 class DumyLists {
   static List<CountWidgetModel> countItems = [
@@ -99,5 +101,13 @@ class DumyLists {
         startyear: "2020",
         endYear: "2024",
         locationOrPosition: "Blockchain,london"),
+  ];
+
+  static List<SkillModel> mySkills = [
+    SkillModel(title: "Flutter", logo: Assets.flutterLogo, percentage: "90%"),
+    SkillModel(title: "Dart", logo: Assets.dartLogo, percentage: "95%"),
+    SkillModel(title: "Firebase", logo: Assets.firebaseLogo, percentage: "95%"),
+    SkillModel(title: "Github", logo: Assets.githubIcon, percentage: "95%"),
+    SkillModel(title: "Figma", logo: Assets.figmaLogo, percentage: "55%"),
   ];
 }
