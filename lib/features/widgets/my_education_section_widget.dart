@@ -25,7 +25,9 @@ class MyEducationSectionWidget extends StatelessWidget {
               color: AppColors.studio,
               size: size.width < SizeConfig.tablet
                   ? size.width * 0.05
-                  : size.width * 0.025,
+                  : size.width < SizeConfig.desktop
+                      ? size.width * 0.045
+                      : size.width * 0.025,
             ),
             const SizedBox(width: 30),
             GradientCustomText(size: size, title: "My Education"),

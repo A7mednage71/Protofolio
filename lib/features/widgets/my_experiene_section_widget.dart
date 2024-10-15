@@ -25,9 +25,11 @@ class MyExperienceSectionWidget extends StatelessWidget {
               color: AppColors.studio,
               size: size.width < SizeConfig.tablet
                   ? size.width * 0.05
-                  : size.width * 0.025,
+                  : size.width < SizeConfig.desktop
+                      ? size.width * 0.050
+                      : size.width * 0.025,
             ),
-            const SizedBox(width: 30),
+            const SizedBox(width: 20),
             GradientCustomText(size: size, title: "My Experience"),
           ],
         ),

@@ -3,6 +3,8 @@ import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
 import 'package:portfolio/features/widgets/count_widgets_list.dart';
+import 'package:portfolio/features/widgets/my_education_section_widget.dart';
+import 'package:portfolio/features/widgets/my_experiene_section_widget.dart';
 import 'package:portfolio/features/widgets/my_recent_work_tab_bar.dart';
 import 'package:portfolio/features/widgets/my_recent_work_top_widget.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
@@ -53,19 +55,29 @@ class TabletLayout extends StatelessWidget {
                   QualityServiceListItems(size: size),
                 ]),
               ),
-              SizedBox(
-                  height: size.height * 0.07,
-                  child: Container(color: AppColors.ebony)),
               Container(
                 width: double.infinity,
                 color: AppColors.ebony,
                 child: Column(children: [
+                  SizedBox(height: size.height * 0.07),
                   MyRecentWorksTopWidget(size: size),
                   SizedBox(height: size.height * 0.03),
                   MyRecentWorksTabBar(size: size),
                   SizedBox(height: size.height * 0.07), // will remove
                 ]),
               ),
+              Container(
+                width: double.infinity * 0.7,
+                color: AppColors.ebony,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    MyExperienceSectionWidget(size: size),
+                    MyEducationSectionWidget(size: size)
+                  ],
+                ),
+              )
             ],
           ),
         ),

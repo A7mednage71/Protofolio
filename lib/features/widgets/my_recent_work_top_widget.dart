@@ -15,7 +15,9 @@ class MyRecentWorksTopWidget extends StatelessWidget {
         style: TextStyle(
             fontSize: size.width < SizeConfig.tablet
                 ? size.width * 0.05
-                : size.width * 0.025,
+                : size.width < SizeConfig.desktop
+                    ? size.width * 0.035
+                    : size.width * 0.025,
             fontWeight: FontWeight.bold,
             fontFamily: 'Poppins'),
         textAlign: TextAlign.center);
