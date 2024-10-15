@@ -28,7 +28,6 @@ class _SkillItemState extends State<SkillItem> {
           onExit: (event) => setHoverState(false),
           child: Container(
               width: widget.size.width * 0.13,
-              height: widget.size.height * 0.16,
               decoration: BoxDecoration(
                 color: AppColors.experienceItemBackground,
                 border: Border.all(

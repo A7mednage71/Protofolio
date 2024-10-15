@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/models/skill_model.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 
@@ -28,7 +29,7 @@ class _SkillItemState extends State<SkillItemTablet> {
           onExit: (event) => setHoverState(false),
           child: Container(
               width: widget.size.width * 0.16,
-              height: widget.size.height * 0.16,
+              // height: widget.size.height * 0.16,
               decoration: BoxDecoration(
                 color: AppColors.experienceItemBackground,
                 border: Border.all(
@@ -48,13 +49,14 @@ class _SkillItemState extends State<SkillItemTablet> {
                       widget.skill.logo,
                       height: widget.size.height * 0.1,
                     ),
-                    const Spacer(),
+                    // const Spacer(),
                     Text(widget.skill.percentage,
                         style: TextStyle(
-                          color: isHover ? Colors.white : AppColors.studio,
-                          fontWeight: FontWeight.bold,
-                        )),
-                    SizedBox(height: widget.size.height * 0.015)
+                            color: isHover ? Colors.white : AppColors.studio,
+                            fontWeight: FontWeight.bold,
+                            fontSize: widget.size.width < SizeConfig.tablet
+                                ? widget.size.width * 0.035
+                                : widget.size.width * 0.02)),
                   ],
                 ),
               )),
@@ -62,9 +64,11 @@ class _SkillItemState extends State<SkillItemTablet> {
         SizedBox(height: widget.size.height * 0.01),
         Text(widget.skill.title,
             style: TextStyle(
-              color: isHover ? Colors.white : AppColors.studio,
-              fontWeight: FontWeight.bold,
-            ))
+                color: isHover ? Colors.white : AppColors.studio,
+                fontWeight: FontWeight.bold,
+                fontSize: widget.size.width < SizeConfig.tablet
+                    ? widget.size.width * 0.035
+                    : widget.size.width * 0.02))
       ],
     );
   }

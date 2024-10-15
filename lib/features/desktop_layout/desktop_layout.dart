@@ -12,6 +12,7 @@ import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
 import 'package:portfolio/features/widgets/quality_service_list_items.dart';
 import 'package:portfolio/features/widgets/quality_service_top_widget.dart';
+import 'package:portfolio/features/widgets/skill_Section_top_text.dart';
 import 'package:portfolio/features/widgets/skills_list_generate.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -91,11 +92,7 @@ class DesktopLayout extends StatelessWidget {
                     SizedBox(height: size.height * 0.1),
                     GradientCustomText(size: size, title: "My Skills"),
                     SizedBox(height: size.height * 0.05),
-                    const Text(
-                      "My skills in app development allow me to create innovative and efficient solutions. I'm always eager to learn and improve,\nensuring I stay updated with the latest technologies.",
-                      style: TextStyle(color: Colors.white),
-                      textAlign: TextAlign.center,
-                    ),
+                    SkillsSectionTopText(size: size),
                     SizedBox(height: size.height * 0.07),
                     SkillsListGenerate(size: size),
                     SizedBox(height: size.height * 0.07),

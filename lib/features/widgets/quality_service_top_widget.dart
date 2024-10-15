@@ -33,7 +33,7 @@ class QualityServiceTopWidget extends StatelessWidget {
                 color: Colors.white,
                 fontSize: size.width < SizeConfig.tablet
                     ? size.width * 0.035
-                    : size.width * 0.014),
+                    : size.width * 0.016),
             textAlign: TextAlign.center,
           ),
         ),

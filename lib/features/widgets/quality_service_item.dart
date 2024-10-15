@@ -69,7 +69,7 @@ class _QualityServiceItemState extends State<QualityServiceItem> {
               child: Text(
                 widget.item.value.description,
                 style: TextStyle(
-                    color: Colors.white, fontSize: widget.size.width * 0.013),
+                    color: Colors.white, fontSize: widget.size.width * 0.015),
               ),
             ),
             SizedBox(width: widget.size.width * 0.01),
