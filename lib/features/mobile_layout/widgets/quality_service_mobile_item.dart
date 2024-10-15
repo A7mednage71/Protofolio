@@ -30,11 +30,12 @@ class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
         margin: EdgeInsets.symmetric(horizontal: widget.size.width * 0.05),
         padding: const EdgeInsets.all(10),
         duration: const Duration(milliseconds: 300),
-        height: widget.size.height * 0.25,
+        // height: widget.size.height * 0.25,
         width: double.infinity,
         decoration: isHovered ? AppStyles.gradientServiceBackground : null,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Text(
               "0${widget.item.key + 1}",
@@ -58,7 +59,8 @@ class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
             Flexible(
               child: Text(
                 widget.item.value.description,
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(
+                    color: Colors.white, fontSize: widget.size.width * 0.035),
                 textAlign: TextAlign.center,
                 // maxLines: 3,
                 // overflow: TextOverflow.ellipsis,

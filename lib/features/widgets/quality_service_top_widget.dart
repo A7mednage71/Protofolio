@@ -25,10 +25,17 @@ class QualityServiceTopWidget extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         SizedBox(height: size.height * 0.03),
-        const Text(
-          "As a passionate and experienced Flutter developer, I specialize in creating high-performance,\nvisually appealing, and cross-platform mobile applications",
-          style: TextStyle(color: Colors.white),
-          textAlign: TextAlign.center,
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            "As a passionate and experienced Flutter developer, I specialize in creating high-performance,\nvisually appealing, and cross-platform mobile applications",
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: size.width < SizeConfig.tablet
+                    ? size.width * 0.035
+                    : size.width * 0.014),
+            textAlign: TextAlign.center,
+          ),
         ),
         SizedBox(height: size.height * 0.05),
       ],

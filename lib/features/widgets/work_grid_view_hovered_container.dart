@@ -25,8 +25,8 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           color: AppColors.studio,
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(left: 16, right: 16),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 16, right: 16),
           child: Row(
             children: [
               Expanded(
@@ -40,7 +40,7 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
-                            fontSize: 16),
+                            fontSize: width * 0.03),
                       ),
                     ),
                     Text(
@@ -48,7 +48,7 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w300,
-                          fontSize: 16),
+                          fontSize: width * 0.03),
                     ),
                   ],
                 ),
@@ -56,6 +56,7 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
               Icon(
                 FontAwesomeIcons.chevronRight,
                 color: Colors.white,
+                size: width * 0.03,
               )
             ],
           ),

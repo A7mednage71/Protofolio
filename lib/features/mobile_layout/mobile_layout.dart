@@ -49,7 +49,7 @@ class MobileLayout extends StatelessWidget {
               CountWidgetsListMobile(size: size),
               SizedBox(height: size.height * 0.07),
               Container(
-                height: size.height * 1.32,
+                // height: size.height * 1.32,
                 width: double.infinity,
                 color: AppColors.ebony,
                 child: Column(children: [

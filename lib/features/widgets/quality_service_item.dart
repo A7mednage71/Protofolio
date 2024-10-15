@@ -30,7 +30,7 @@ class _QualityServiceItemState extends State<QualityServiceItem> {
         margin: EdgeInsets.symmetric(horizontal: widget.size.width * 0.02),
         padding: const EdgeInsets.all(10),
         duration: const Duration(milliseconds: 300),
-        height: widget.size.height * 0.12,
+        // height: widget.size.height * 0.12,
         width: double.infinity,
         decoration: isHovered ? AppStyles.gradientServiceBackground : null,
         child: Row(
@@ -54,7 +54,7 @@ class _QualityServiceItemState extends State<QualityServiceItem> {
                       widget.item.value.title,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: widget.size.width * 0.025,
+                        fontSize: widget.size.width * 0.021,
                         fontWeight: FontWeight.bold,
                         // overflow: TextOverflow.clip,
                       ),
@@ -68,7 +68,8 @@ class _QualityServiceItemState extends State<QualityServiceItem> {
               flex: 3,
               child: Text(
                 widget.item.value.description,
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(
+                    color: Colors.white, fontSize: widget.size.width * 0.013),
               ),
             ),
             SizedBox(width: widget.size.width * 0.01),

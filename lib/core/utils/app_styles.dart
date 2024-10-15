@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
@@ -19,6 +21,15 @@ class AppStyles {
       ],
     ),
   );
+
+  // static TextStyle semiBold18(BuildContext context) {
+  //   return TextStyle(
+  //     color: Colors.white,
+  //     fontSize: getResponsivefontSize(fontsize: 18, context),
+  //     fontFamily: 'Montserrat',
+  //     fontWeight: FontWeight.w600,
+  //   );
+  // }
 }
 
 double getResponsivefontSize(
@@ -30,7 +41,7 @@ double getResponsivefontSize(
 
   double lower = fontsize * 0.8;
   double upper = fontsize * 1.2;
-
+  log("${responsiveSize.clamp(lower, upper)}");
   return responsiveSize.clamp(lower, upper);
 }
 
@@ -42,6 +53,6 @@ double getScaleFactor(context) {
   } else if (width < SizeConfig.desktop) {
     return width / 600;
   } else {
-    return width / 1000;
+    return width / 900;
   }
 }
