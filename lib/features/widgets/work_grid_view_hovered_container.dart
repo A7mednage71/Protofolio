@@ -20,13 +20,12 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
       right: 10,
       child: Container(
         width: width,
-        height: height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: AppColors.studio,
         ),
         child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
+          padding: const EdgeInsets.all(10),
           child: Row(
             children: [
               Expanded(
