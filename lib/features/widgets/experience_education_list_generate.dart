@@ -17,7 +17,7 @@ class EducationList extends StatelessWidget {
           endYear: item.value.endYear,
           title: item.value.title,
           locationOrPosition: item.value.locationOrPosition,
-          size: MediaQuery.of(context).size,
+          size: size,
         ),
       );
     }).toList());
@@ -39,7 +39,7 @@ class ExperienceList extends StatelessWidget {
           endYear: item.value.endYear,
           title: item.value.title,
           locationOrPosition: item.value.locationOrPosition,
-          size: MediaQuery.of(context).size,
+          size: size,
         ),
       );
     }).toList());

@@ -85,14 +85,12 @@ class DesktopLayout extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                  height: size.height * 0.1,
-                  child: Container(color: AppColors.ebony)),
               Container(
                 width: double.infinity,
                 color: AppColors.ebony,
                 child: Column(
                   children: [
+                    SizedBox(height: size.height * 0.1),
                     GradientCustomText(size: size, title: "My Skills"),
                     SizedBox(height: size.height * 0.05),
                     const Text(

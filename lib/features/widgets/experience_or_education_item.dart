@@ -37,7 +37,7 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
       onExit: (event) => sethoverState(false),
       child: Container(
         width: widget.size.width * 0.4,
-        height: widget.size.height * 0.15,
+        height: widget.size.height * 0.17,
         decoration: BoxDecoration(
           color: isHovered ? null : AppColors.experienceItemBackground,
           gradient: isHovered
@@ -54,6 +54,7 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "${widget.startYear} - ${widget.endYear}",
