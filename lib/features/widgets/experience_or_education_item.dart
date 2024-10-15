@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 
 class ExperienceOrEducationItem extends StatefulWidget {
@@ -38,9 +37,6 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
       onExit: (event) => sethoverState(false),
       child: Container(
         width: widget.size.width * 0.4,
-        height: widget.size.width < SizeConfig.desktop
-            ? widget.size.height * 0.12
-            : widget.size.height * 0.17,
         decoration: BoxDecoration(
           color: isHovered ? null : AppColors.experienceItemBackground,
           gradient: isHovered
@@ -63,16 +59,18 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
                 "${widget.startYear} - ${widget.endYear}",
                 style: TextStyle(
                     color: isHovered ? Colors.white : AppColors.studio,
-                    fontSize: 16,
+                    fontSize: widget.size.width * 0.012,
                     fontWeight: FontWeight.bold),
               ),
               Text(widget.title,
-                  style: const TextStyle(
+                  style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20)),
+                      fontSize: widget.size.width * 0.017)),
               Text(widget.locationOrPosition,
-                  style: const TextStyle(color: Colors.white)),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: widget.size.width * 0.012)),
             ],
           ),
         ),
