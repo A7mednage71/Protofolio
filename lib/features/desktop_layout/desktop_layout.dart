@@ -57,13 +57,11 @@ class DesktopLayout extends StatelessWidget {
                   QualityServiceListItems(size: size),
                 ]),
               ),
-              SizedBox(
-                  height: size.height * 0.07,
-                  child: Container(color: AppColors.ebony)),
               Container(
                 width: double.infinity,
                 color: AppColors.ebony,
                 child: Column(children: [
+                  SizedBox(height: size.height * 0.07),
                   MyRecentWorksTopWidget(size: size),
                   SizedBox(height: size.height * 0.03),
                   MyRecentWorksTabBar(size: size),
