@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 
 class ExperienceOrEducationItem extends StatefulWidget {
@@ -37,7 +38,9 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
       onExit: (event) => sethoverState(false),
       child: Container(
         width: widget.size.width * 0.4,
-        height: widget.size.height * 0.17,
+        height: widget.size.width < SizeConfig.desktop
+            ? widget.size.height * 0.12
+            : widget.size.height * 0.17,
         decoration: BoxDecoration(
           color: isHovered ? null : AppColors.experienceItemBackground,
           gradient: isHovered
