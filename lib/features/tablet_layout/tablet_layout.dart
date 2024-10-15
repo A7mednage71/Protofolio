@@ -89,8 +89,9 @@ class TabletLayout extends StatelessWidget {
                     GradientCustomText(size: size, title: "My Skills"),
                     SizedBox(height: size.height * 0.03),
                     const Text(
-                      "My skills in app development allow me to create innovative and efficient solutions. I'm always eager to learn and improve,\nensuring I stay updated with the latest technologies.",
+                      "My skills in app development allow me to create innovative and efficient solutions. I'm always eager\nto learn and improve, ensuring I stay updated with the latest technologies.",
                       style: TextStyle(color: Colors.white),
+                      textAlign: TextAlign.center,
                     ),
                     SizedBox(height: size.height * 0.05),
                     SkillsListGenerate(size: size),
