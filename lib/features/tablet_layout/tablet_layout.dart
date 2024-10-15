@@ -94,7 +94,7 @@ class TabletLayout extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: size.height * 0.05),
-                    SkillsListGenerate(size: size),
+                    SkillsTabletListGenerate(size: size),
                     SizedBox(height: size.height * 0.07),
                   ],
                 ),

@@ -13,7 +13,7 @@ class ProtofolioHomePage extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth < SizeConfig.tablet) {
           return const MobileLayout();
-        } else if (constraints.maxWidth < SizeConfig.desktop) {
+        } else if (constraints.maxWidth <= SizeConfig.bigTablet) {
           return const TabletLayout();
         } else {
           return const DesktopLayout();
