@@ -27,8 +27,8 @@ class _SkillItemState extends State<SkillItem> {
           onEnter: (event) => setHoverState(true),
           onExit: (event) => setHoverState(false),
           child: Container(
-              width: widget.size.width * 0.1,
-              height: widget.size.height * 0.2,
+              width: widget.size.width * 0.13,
+              height: widget.size.height * 0.16,
               decoration: BoxDecoration(
                 color: AppColors.experienceItemBackground,
                 border: Border.all(
@@ -37,19 +37,20 @@ class _SkillItemState extends State<SkillItem> {
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: Column(
-                children: [
-                  SizedBox(height: widget.size.height * 0.025),
-                  SvgPicture.asset(widget.skill.logo,
-                      height: widget.size.height * 0.1),
-                  const Spacer(),
-                  Text(widget.skill.percentage,
-                      style: TextStyle(
-                        color: isHover ? Colors.white : AppColors.studio,
-                        fontWeight: FontWeight.bold,
-                      )),
-                  SizedBox(height: widget.size.height * 0.02),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    SvgPicture.asset(widget.skill.logo,
+                        height: widget.size.height * 0.1),
+                    Text(widget.skill.percentage,
+                        style: TextStyle(
+                          color: isHover ? Colors.white : AppColors.studio,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ],
+                ),
               )),
         ),
         SizedBox(height: widget.size.height * 0.01),
