@@ -32,7 +32,6 @@ class _SkillItemState extends State<SkillItemTablet> {
               width: isMobile
                   ? widget.size.width * 0.25
                   : widget.size.width * 0.16,
-              // height: widget.size.height * 0.16,
               decoration: BoxDecoration(
                 color: AppColors.experienceItemBackground,
                 border: Border.all(
@@ -47,10 +46,9 @@ class _SkillItemState extends State<SkillItemTablet> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: widget.size.height * 0.010),
                     SvgPicture.asset(
                       widget.skill.logo,
-                      height: widget.size.height * 0.1,
+                      height: widget.size.height * 0.08,
                     ),
                     // const Spacer(),
                     Text(widget.skill.percentage,
@@ -58,19 +56,18 @@ class _SkillItemState extends State<SkillItemTablet> {
                             color: isHover ? Colors.white : AppColors.studio,
                             fontWeight: FontWeight.bold,
                             fontSize: widget.size.width < SizeConfig.tablet
-                                ? widget.size.width * 0.035
+                                ? widget.size.width * 0.03
                                 : widget.size.width * 0.02)),
                   ],
                 ),
               )),
         ),
-        SizedBox(height: widget.size.height * 0.01),
         Text(widget.skill.title,
             style: TextStyle(
                 color: isHover ? Colors.white : AppColors.studio,
                 fontWeight: FontWeight.bold,
                 fontSize: widget.size.width < SizeConfig.tablet
-                    ? widget.size.width * 0.035
+                    ? widget.size.width * 0.03
                     : widget.size.width * 0.02))
       ],
     );
