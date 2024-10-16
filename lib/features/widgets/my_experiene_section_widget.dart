@@ -16,7 +16,9 @@ class MyExperienceSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: size.width < SizeConfig.tablet
+          ? CrossAxisAlignment.center
+          : CrossAxisAlignment.start,
       children: [
         Row(
           children: [
@@ -24,7 +26,7 @@ class MyExperienceSectionWidget extends StatelessWidget {
               FontAwesomeIcons.award,
               color: AppColors.studio,
               size: size.width < SizeConfig.tablet
-                  ? size.width * 0.05
+                  ? size.width * 0.06
                   : size.width < SizeConfig.desktop
                       ? size.width * 0.050
                       : size.width * 0.025,

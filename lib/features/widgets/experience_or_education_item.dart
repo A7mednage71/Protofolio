@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 
 class ExperienceOrEducationItem extends StatefulWidget {
@@ -31,12 +32,13 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
 
   @override
   Widget build(BuildContext context) {
+    bool isMobile = widget.size.width < SizeConfig.tablet;
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       onEnter: (event) => sethoverState(true),
       onExit: (event) => sethoverState(false),
       child: Container(
-        width: widget.size.width * 0.4,
+        width: isMobile ? widget.size.width : widget.size.width * 0.4,
         decoration: BoxDecoration(
           color: isHovered ? null : AppColors.experienceItemBackground,
           gradient: isHovered
@@ -59,18 +61,24 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
                 "${widget.startYear} - ${widget.endYear}",
                 style: TextStyle(
                     color: isHovered ? Colors.white : AppColors.studio,
-                    fontSize: widget.size.width * 0.012,
+                    fontSize: isMobile
+                        ? widget.size.width * 0.03
+                        : widget.size.width * 0.012,
                     fontWeight: FontWeight.bold),
               ),
               Text(widget.title,
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: widget.size.width * 0.017)),
+                      fontSize: isMobile
+                          ? widget.size.width * 0.04
+                          : widget.size.width * 0.017)),
               Text(widget.locationOrPosition,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: widget.size.width * 0.012)),
+                      fontSize: isMobile
+                          ? widget.size.width * 0.03
+                          : widget.size.width * 0.012)),
             ],
           ),
         ),

@@ -4,6 +4,8 @@ import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/mobile_layout/widgets/count_widgets_list_mobile.dart';
 import 'package:portfolio/features/mobile_layout/widgets/quality_service_mobile_items_list.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
+import 'package:portfolio/features/widgets/my_education_section_widget.dart';
+import 'package:portfolio/features/widgets/my_experiene_section_widget.dart';
 import 'package:portfolio/features/widgets/my_recent_work_tab_bar.dart';
 import 'package:portfolio/features/widgets/my_recent_work_top_widget.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
@@ -49,7 +51,6 @@ class MobileLayout extends StatelessWidget {
               CountWidgetsListMobile(size: size),
               SizedBox(height: size.height * 0.07),
               Container(
-                // height: size.height * 1.32,
                 width: double.infinity,
                 color: AppColors.ebony,
                 child: Column(children: [
@@ -57,19 +58,32 @@ class MobileLayout extends StatelessWidget {
                   QualityServiceMobileListItems(size: size),
                 ]),
               ),
-              SizedBox(
-                  height: size.height * 0.07,
-                  child: Container(color: AppColors.ebony)),
               Container(
                 width: double.infinity,
                 color: AppColors.ebony,
                 child: Column(children: [
+                  SizedBox(height: size.height * 0.07),
                   MyRecentWorksTopWidget(size: size),
                   SizedBox(height: size.height * 0.03),
                   MyRecentWorksTabBar(size: size),
                   SizedBox(height: size.height * 0.07), // will remove
                 ]),
-              )
+              ),
+              Container(
+                width: double.infinity,
+                color: AppColors.ebony,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      MyExperienceSectionWidget(size: size),
+                      MyEducationSectionWidget(size: size)
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),

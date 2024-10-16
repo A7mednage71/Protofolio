@@ -69,9 +69,6 @@ class DesktopLayout extends StatelessWidget {
                   SizedBox(height: size.height * 0.07), // will remove
                 ]),
               ),
-              SizedBox(
-                  height: size.height * 0.07,
-                  child: Container(color: AppColors.ebony)),
               Container(
                 width: double.infinity * 0.7,
                 color: AppColors.ebony,
@@ -79,6 +76,7 @@ class DesktopLayout extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    SizedBox(height: size.height * 0.07),
                     MyExperienceSectionWidget(size: size),
                     MyEducationSectionWidget(size: size)
                   ],
