@@ -50,3 +50,4 @@ class SkillsTabletListGenerate extends StatelessWidget {
         }).toList());
   }
 }
+

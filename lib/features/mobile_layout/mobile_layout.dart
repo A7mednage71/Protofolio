@@ -3,7 +3,9 @@ import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_styles.dart';
 import 'package:portfolio/features/mobile_layout/widgets/count_widgets_list_mobile.dart';
 import 'package:portfolio/features/mobile_layout/widgets/quality_service_mobile_items_list.dart';
+import 'package:portfolio/features/mobile_layout/widgets/skills_grid_view_mobile.dart';
 import 'package:portfolio/features/tablet_layout/widgets/download_cv_and_socia_buttons.dart';
+import 'package:portfolio/features/widgets/gradient_custom_text.dart';
 import 'package:portfolio/features/widgets/my_education_section_widget.dart';
 import 'package:portfolio/features/widgets/my_experiene_section_widget.dart';
 import 'package:portfolio/features/widgets/my_recent_work_tab_bar.dart';
@@ -11,6 +13,7 @@ import 'package:portfolio/features/widgets/my_recent_work_top_widget.dart';
 import 'package:portfolio/features/widgets/profile_image.dart';
 import 'package:portfolio/features/widgets/profile_main_details.dart';
 import 'package:portfolio/features/widgets/quality_service_top_widget.dart';
+import 'package:portfolio/features/widgets/skill_Section_top_text.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
@@ -82,6 +85,21 @@ class MobileLayout extends StatelessWidget {
                       MyEducationSectionWidget(size: size)
                     ],
                   ),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                color: AppColors.ebony,
+                child: Column(
+                  children: [
+                    SizedBox(height: size.height * 0.1),
+                    GradientCustomText(size: size, title: "My Skills"),
+                    SizedBox(height: size.height * 0.03),
+                    SkillsSectionTopText(size: size),
+                    SizedBox(height: size.height * 0.05),
+                    SkillMobileGrid(size: size),
+                    SizedBox(height: size.height * 0.07),
+                  ],
                 ),
               ),
             ],
