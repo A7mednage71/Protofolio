@@ -26,7 +26,7 @@ class MobileLayout extends StatelessWidget {
               CountWidgetsListMobile(size: size),
               SizedBox(height: size.height * 0.07),
               QualityServiceSectionMobile(size: size),
-              MyWorksSection(size: size),
+              MyWorksSection(size: size , sectionKey:null),
               ExperienceAndEducationSectionMobile(size: size),
               MySkillsSectionMobile(size: size),
             ],

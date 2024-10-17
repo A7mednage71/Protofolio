@@ -8,13 +8,16 @@ class MySkillsSectionTablet extends StatelessWidget {
   const MySkillsSectionTablet({
     super.key,
     required this.size,
+    this.sectionKey,
   });
 
   final Size size;
+  final GlobalKey? sectionKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: sectionKey,
       width: double.infinity,
       color: AppColors.ebony,
       child: Column(

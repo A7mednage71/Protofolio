@@ -7,14 +7,16 @@ import 'package:portfolio/features/widgets/profile_main_details.dart';
 class TabletHomeSection extends StatelessWidget {
   const TabletHomeSection({
     super.key,
-    required this.size,
+    required this.size, this.sectionKey,
   });
 
   final Size size;
+   final GlobalKey? sectionKey;
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: sectionKey,
       children: [
         Row(
           children: [

@@ -8,13 +8,16 @@ class DesktopHomeSection extends StatelessWidget {
   const DesktopHomeSection({
     super.key,
     required this.size,
+    required this.sectionKey,
   });
 
   final Size size;
+  final GlobalKey? sectionKey;
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: sectionKey,
       children: [
         Row(
           children: [
