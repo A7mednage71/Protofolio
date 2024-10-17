@@ -7,9 +7,13 @@ class ExperienceAndEducationSectionMobile extends StatelessWidget {
   const ExperienceAndEducationSectionMobile({
     super.key,
     required this.size,
+    required this.experienceSectionKey,
+    required this.educationSectionKey,
   });
 
   final Size size;
+  final GlobalKey experienceSectionKey;
+  final GlobalKey educationSectionKey;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +26,10 @@ class ExperienceAndEducationSectionMobile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            MyExperienceSectionWidget(size: size),
-            MyEducationSectionWidget(size: size)
+            MyExperienceSectionWidget(
+                size: size, sectionKey: experienceSectionKey),
+            MyEducationSectionWidget(
+                size: size, sectionKey: educationSectionKey),
           ],
         ),
       ),

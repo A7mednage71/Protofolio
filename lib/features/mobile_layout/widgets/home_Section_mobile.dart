@@ -7,13 +7,16 @@ class HomeSectionMobile extends StatelessWidget {
   const HomeSectionMobile({
     super.key,
     required this.size,
+    this.sectionKey,
   });
 
   final Size size;
+  final GlobalKey? sectionKey;
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: sectionKey,
       children: [
         ProfileImageWidget(size: size),
         Row(

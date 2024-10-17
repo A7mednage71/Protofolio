@@ -23,8 +23,8 @@ class ExperienceAndEducationSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          MyExperienceSectionWidget(size: size),
-          MyEducationSectionWidget(size: size)
+          MyExperienceSectionWidget(size: size, sectionKey: null),
+          MyEducationSectionWidget(size: size, sectionKey: null),
         ],
       ),
     );

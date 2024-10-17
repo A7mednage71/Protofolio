@@ -47,8 +47,9 @@ class _DesktopLayoutState extends State<DesktopLayout> {
               DesktopHomeSection(size: size, sectionKey: _sectionsKeys[0]),
               QualityServicesSection(size: size, sectionKey: _sectionsKeys[1]),
               MyWorksSection(size: size, sectionKey: _sectionsKeys[2]),
-              ExperienceAndEducationSection(size: size , sectionKey: _sectionsKeys[3]),
-              MySkillsSectionDesktop(size: size , sectionKey: _sectionsKeys[4]),
+              ExperienceAndEducationSection(
+                  size: size, sectionKey: _sectionsKeys[3]),
+              MySkillsSectionDesktop(size: size, sectionKey: _sectionsKeys[4]),
             ],
           ),
         ),

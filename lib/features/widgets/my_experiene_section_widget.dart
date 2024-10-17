@@ -9,13 +9,15 @@ class MyExperienceSectionWidget extends StatelessWidget {
   const MyExperienceSectionWidget({
     super.key,
     required this.size,
+    required this.sectionKey,
   });
 
   final Size size;
-
+  final GlobalKey? sectionKey;
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: sectionKey,
       crossAxisAlignment: size.width < SizeConfig.tablet
           ? CrossAxisAlignment.center
           : CrossAxisAlignment.start,

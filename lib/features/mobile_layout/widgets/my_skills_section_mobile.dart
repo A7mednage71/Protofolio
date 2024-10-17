@@ -8,13 +8,15 @@ class MySkillsSectionMobile extends StatelessWidget {
   const MySkillsSectionMobile({
     super.key,
     required this.size,
+    required this.sectionKey,
   });
 
   final Size size;
-
+  final GlobalKey? sectionKey;
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: sectionKey,
       width: double.infinity,
       color: AppColors.ebony,
       child: Column(
