@@ -70,7 +70,11 @@ class _MyRecentWorksTabBarState extends State<MyRecentWorksTabBar>
               children: [
                 MyRecentWorkGridView(
                     works: MyDummeyData.myRecentWorks, size: widget.size),
-                MyRecentWorkGridView(works: const [], size: widget.size),
+                MyRecentWorkGridView(
+                    works: MyDummeyData.myRecentWorks
+                        .where((e) => e.type == "Brands")
+                        .toList(),
+                    size: widget.size),
                 MyRecentWorkGridView(
                     works: MyDummeyData.myRecentWorks
                         .where((e) => e.type == "Apps")

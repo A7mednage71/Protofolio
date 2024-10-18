@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/core/models/recent_work_model.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 
 class MyWorkGridItemHoveredContainer extends StatelessWidget {
@@ -7,11 +8,12 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
     super.key,
     required this.width,
     required this.height,
+    required this.work,
   });
 
   final double width;
   final double height;
-
+  final RecentWorkModel work;
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -35,7 +37,7 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
                   children: [
                     FittedBox(
                       child: Text(
-                        "widget.works[index].title",
+                        work.title,
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,

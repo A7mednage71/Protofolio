@@ -45,7 +45,7 @@ class _ProfileImageWidgetState extends State<ProfileImageWidget> {
             border: Border.all(width: 2, color: AppColors.studio),
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             image: const DecorationImage(
-              image: AssetImage(Assets.projectImage2),
+              image: AssetImage(Assets.profileImage),
               fit: BoxFit.fill,
             ),
           ),

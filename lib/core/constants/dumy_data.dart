@@ -48,24 +48,24 @@ class MyDummeyData {
 
   static List<RecentWorkModel> myRecentWorks = [
     RecentWorkModel(
-        title: "Web Development",
-        type: "Web Development",
-        projectAsset: "assets/images/portfolio.png",
+        title: "Food Delivery App",
+        type: "Apps",
+        projectAsset: Assets.foodDeliveryAsset,
         projectLink: "https://www.google.com/"),
     RecentWorkModel(
-        title: "Android Development",
-        type: "Android Development",
-        projectAsset: "assets/images/portfolio.png",
+        title: "Cooking App",
+        type: "Brands",
+        projectAsset: Assets.cookingAsset,
         projectLink: "https://www.google.com/"),
     RecentWorkModel(
-        title: "Flutter Development",
-        type: "Flutter Development",
-        projectAsset: "assets/images/portfolio.png",
+        title: "Coffee Shop App",
+        type: "Apps",
+        projectAsset: Assets.coffeeproject,
         projectLink: "https://www.google.com/"),
     RecentWorkModel(
-      title: "Android Development",
-      type: "Android Development",
-      projectAsset: "assets/images/portfolio.png",
+      title: "Coin Pay App",
+      type: "Apps",
+      projectAsset: Assets.coinPayAsset,
       projectLink: "https://www.google.com/",
     ),
   ];

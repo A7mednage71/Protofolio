@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/utils/app_assets.dart';
+import 'package:portfolio/core/models/recent_work_model.dart';
 import 'package:portfolio/features/widgets/work_grid_view_hovered_container.dart';
 
 class MyWorkGridViewItem extends StatefulWidget {
@@ -7,10 +7,12 @@ class MyWorkGridViewItem extends StatefulWidget {
     super.key,
     required this.cardWidth,
     required this.cardHeight,
+    required this.workModel,
   });
 
   final double cardWidth;
   final double cardHeight;
+  final RecentWorkModel workModel;
 
   @override
   State<MyWorkGridViewItem> createState() => _MyWorkGridViewItemState();
@@ -39,8 +41,8 @@ class _MyWorkGridViewItemState extends State<MyWorkGridViewItem> {
               decoration: BoxDecoration(
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(20),
-                image: const DecorationImage(
-                  image: AssetImage(Assets.projectImage),
+                image: DecorationImage(
+                  image: AssetImage(widget.workModel.projectAsset),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -49,6 +51,7 @@ class _MyWorkGridViewItemState extends State<MyWorkGridViewItem> {
               MyWorkGridItemHoveredContainer(
                 height: widget.cardHeight * 0.3,
                 width: widget.cardWidth,
+                work: widget.workModel,
               ),
           ],
         ),

@@ -41,7 +41,10 @@ class MyRecentWorkGridView extends StatelessWidget {
       ),
       itemCount: works.length,
       itemBuilder: (context, index) {
-        return MyWorkGridViewItem(cardWidth: cardWidth, cardHeight: cardHeight);
+        return MyWorkGridViewItem(
+            cardWidth: cardWidth,
+            cardHeight: cardHeight,
+            workModel: works[index]);
       },
     );
   }
