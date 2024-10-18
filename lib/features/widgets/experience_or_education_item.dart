@@ -34,57 +34,62 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
   Widget build(BuildContext context) {
     bool isMobile = widget.size.width < SizeConfig.tablet;
     bool isTablet = widget.size.width < SizeConfig.desktop;
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      onEnter: (event) => sethoverState(true),
-      onExit: (event) => sethoverState(false),
-      child: Container(
-        width: isMobile ? widget.size.width : widget.size.width * 0.4,
-        decoration: BoxDecoration(
-          color: isHovered ? null : AppColors.experienceItemBackground,
-          gradient: isHovered
-              ? const LinearGradient(
-                  colors: [
-                    AppColors.studio,
-                    AppColors.valhalla,
-                  ],
-                )
-              : null,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "${widget.startYear} - ${widget.endYear}",
-                style: TextStyle(
-                    color: isHovered ? Colors.white : AppColors.studio,
-                    fontSize: isMobile
-                        ? widget.size.width * 0.03
-                        : isTablet
-                            ? widget.size.width * 0.016
-                            : widget.size.width * 0.012,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(widget.title,
+    return InkWell(
+      onTap: () {
+        sethoverState(!isHovered);
+      },
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        onEnter: (event) => sethoverState(true),
+        onExit: (event) => sethoverState(false),
+        child: Container(
+          width: isMobile ? widget.size.width : widget.size.width * 0.4,
+          decoration: BoxDecoration(
+            color: isHovered ? null : AppColors.experienceItemBackground,
+            gradient: isHovered
+                ? const LinearGradient(
+                    colors: [
+                      AppColors.studio,
+                      AppColors.valhalla,
+                    ],
+                  )
+                : null,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "${widget.startYear} - ${widget.endYear}",
                   style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: isMobile
-                          ? widget.size.width * 0.04
-                          : widget.size.width * 0.019)),
-              Text(widget.locationOrPosition,
-                  style: TextStyle(
-                      color: Colors.white,
+                      color: isHovered ? Colors.white : AppColors.studio,
                       fontSize: isMobile
                           ? widget.size.width * 0.03
                           : isTablet
                               ? widget.size.width * 0.016
-                              : widget.size.width * 0.012)),
-            ],
+                              : widget.size.width * 0.012,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(widget.title,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: isMobile
+                            ? widget.size.width * 0.04
+                            : widget.size.width * 0.019)),
+                Text(widget.locationOrPosition,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: isMobile
+                            ? widget.size.width * 0.03
+                            : isTablet
+                                ? widget.size.width * 0.016
+                                : widget.size.width * 0.012)),
+              ],
+            ),
           ),
         ),
       ),

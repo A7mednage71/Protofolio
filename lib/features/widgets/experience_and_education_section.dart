@@ -21,7 +21,7 @@ class ExperienceAndEducationSection extends StatelessWidget {
       color: AppColors.ebony,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           MyExperienceSectionWidget(size: size, sectionKey: null),
           MyEducationSectionWidget(size: size, sectionKey: null),

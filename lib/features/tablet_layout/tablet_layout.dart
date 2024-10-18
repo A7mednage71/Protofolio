@@ -15,21 +15,8 @@ class TabletLayout extends StatefulWidget {
 }
 
 class _TabletLayoutState extends State<TabletLayout> {
-  late ScrollController _scrollController;
   final List<GlobalKey> _sectionsKeys =
       List.generate(5, (index) => GlobalKey());
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController = ScrollController();
-  }
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +28,6 @@ class _TabletLayoutState extends State<TabletLayout> {
         width: double.infinity,
         decoration: AppStyles.gradientBackground,
         child: SingleChildScrollView(
-          controller: _scrollController,
           child: Column(
             children: [
               TabletHomeSection(size: size, sectionKey: _sectionsKeys[0]),

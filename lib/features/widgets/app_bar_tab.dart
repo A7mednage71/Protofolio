@@ -14,8 +14,10 @@ class CustomAppBarTab extends StatefulWidget {
 
 class _CustomAppBarTabState extends State<CustomAppBarTab> {
   bool isHover = false;
-  setHoverState(bool value) {
-    setState(() => isHover = value);
+  sethoverState(bool bool) {
+    setState(() {
+      isHover = bool;
+    });
   }
 
   @override
@@ -32,8 +34,9 @@ class _CustomAppBarTabState extends State<CustomAppBarTab> {
     // Layout the text
     textPainter.layout();
     return MouseRegion(
-      onEnter: (event) => setHoverState(true),
-      onExit: (event) => setHoverState(false),
+      onEnter: (event) => sethoverState(true),
+      onExit: (event) => sethoverState(false),
+      cursor: SystemMouseCursors.click,
       child: TextButton(
         style: TextButton.styleFrom(
           overlayColor: Colors.transparent,

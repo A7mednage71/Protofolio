@@ -26,29 +26,32 @@ class _MyWorkGridViewItemState extends State<MyWorkGridViewItem> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      onEnter: (event) => changeHoveredState(true),
-      onExit: (event) => changeHoveredState(false),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.grey[200],
-              borderRadius: BorderRadius.circular(20),
-              image: const DecorationImage(
-                image: AssetImage(Assets.projectImage),
-                fit: BoxFit.fill,
+    return InkWell(
+      onTap: () => changeHoveredState(!isHovered),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        onEnter: (event) => changeHoveredState(true),
+        onExit: (event) => changeHoveredState(false),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(20),
+                image: const DecorationImage(
+                  image: AssetImage(Assets.projectImage),
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
-          ),
-          if (isHovered)
-            MyWorkGridItemHoveredContainer(
-              height: widget.cardHeight * 0.3,
-              width: widget.cardWidth,
-            ),
-        ],
+            if (isHovered)
+              MyWorkGridItemHoveredContainer(
+                height: widget.cardHeight * 0.3,
+                width: widget.cardWidth,
+              ),
+          ],
+        ),
       ),
     );
   }

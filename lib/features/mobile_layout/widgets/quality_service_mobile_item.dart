@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/models/quality_service_model.dart';
@@ -20,60 +22,72 @@ class QualityServiceMobileItem extends StatefulWidget {
 
 class _QualityServiceMobileItem extends State<QualityServiceMobileItem> {
   bool isHovered = false;
+  sethoverState(bool bool) {
+    setState(() {
+      isHovered = bool;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (event) => setState(() => isHovered = true),
-      onExit: (event) => setState(() => isHovered = false),
-      cursor: SystemMouseCursors.click,
-      child: AnimatedContainer(
-        margin: EdgeInsets.symmetric(horizontal: widget.size.width * 0.05),
-        padding: const EdgeInsets.all(10),
-        duration: const Duration(milliseconds: 300),
-        // height: widget.size.height * 0.25,
-        width: double.infinity,
-        decoration: isHovered ? AppStyles.gradientServiceBackground : null,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              "0${widget.item.key + 1}",
-              style: TextStyle(
-                color: isHovered ? AppColors.paleSlate : AppColors.studio,
-                fontWeight: FontWeight.bold,
-                fontSize: widget.size.width * 0.040,
-              ),
-            ),
-            SizedBox(height: widget.size.height * 0.01),
-            Text(
-              widget.item.value.title,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: widget.size.width * 0.035,
-                fontWeight: FontWeight.bold,
-                // overflow: TextOverflow.clip,
-              ),
-            ),
-            SizedBox(height: widget.size.height * 0.01),
-            Flexible(
-              child: Text(
-                widget.item.value.description,
+    return InkWell(
+      onTap: () {
+        sethoverState(!isHovered);
+        log("tapped");
+      },
+      child: MouseRegion(
+        onEnter: (event) => sethoverState(true),
+        onExit: (event) => sethoverState(false),
+        cursor: SystemMouseCursors.click,
+        child: AnimatedContainer(
+          margin: EdgeInsets.symmetric(horizontal: widget.size.width * 0.05),
+          padding: const EdgeInsets.all(10),
+          duration: const Duration(milliseconds: 300),
+          // height: widget.size.height * 0.25,
+          width: double.infinity,
+          decoration: isHovered ? AppStyles.gradientServiceBackground : null,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                "0${widget.item.key + 1}",
                 style: TextStyle(
-                    color: Colors.white, fontSize: widget.size.width * 0.035),
-                textAlign: TextAlign.center,
-                // maxLines: 3,
-                // overflow: TextOverflow.ellipsis,
+                  color: isHovered ? AppColors.paleSlate : AppColors.studio,
+                  fontWeight: FontWeight.bold,
+                  fontSize: widget.size.width * 0.040,
+                ),
               ),
-            ),
-            SizedBox(height: widget.size.height * 0.006),
-            Icon(
-              isHovered
-                  ? FontAwesomeIcons.arrowTrendUp
-                  : FontAwesomeIcons.arrowTrendDown,
-              color: isHovered ? AppColors.paleSlate : AppColors.studio,
-            ),
-          ],
+              SizedBox(height: widget.size.height * 0.01),
+              Text(
+                widget.item.value.title,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: widget.size.width * 0.035,
+                  fontWeight: FontWeight.bold,
+                  // overflow: TextOverflow.clip,
+                ),
+              ),
+              SizedBox(height: widget.size.height * 0.01),
+              Flexible(
+                child: Text(
+                  widget.item.value.description,
+                  style: TextStyle(
+                      color: Colors.white, fontSize: widget.size.width * 0.035),
+                  textAlign: TextAlign.center,
+                  // maxLines: 3,
+                  // overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              SizedBox(height: widget.size.height * 0.006),
+              Icon(
+                isHovered
+                    ? FontAwesomeIcons.arrowTrendUp
+                    : FontAwesomeIcons.arrowTrendDown,
+                color: isHovered ? AppColors.paleSlate : AppColors.studio,
+              ),
+            ],
+          ),
         ),
       ),
     );
