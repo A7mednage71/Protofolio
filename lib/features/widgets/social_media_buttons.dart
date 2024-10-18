@@ -11,7 +11,7 @@ class SocialMediaButtons extends StatelessWidget {
       children: [
         SocialIconWidget(icon: FontAwesomeIcons.facebookF),
         SocialIconWidget(icon: FontAwesomeIcons.linkedin),
-        SocialIconWidget(icon: FontAwesomeIcons.dribbble),
+        SocialIconWidget(icon: FontAwesomeIcons.envelope),
         SocialIconWidget(icon: FontAwesomeIcons.github),
       ],
     );

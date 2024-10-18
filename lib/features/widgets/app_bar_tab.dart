@@ -46,7 +46,7 @@ class _CustomAppBarTabState extends State<CustomAppBarTab> {
               widget.text,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: width * 0.015,
+                fontSize: width * 0.016,
                 fontWeight: FontWeight.bold,
               ),
             ),

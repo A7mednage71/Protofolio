@@ -33,6 +33,7 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
   @override
   Widget build(BuildContext context) {
     bool isMobile = widget.size.width < SizeConfig.tablet;
+    bool isTablet = widget.size.width < SizeConfig.desktop;
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       onEnter: (event) => sethoverState(true),
@@ -63,7 +64,9 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
                     color: isHovered ? Colors.white : AppColors.studio,
                     fontSize: isMobile
                         ? widget.size.width * 0.03
-                        : widget.size.width * 0.012,
+                        : isTablet
+                            ? widget.size.width * 0.016
+                            : widget.size.width * 0.012,
                     fontWeight: FontWeight.bold),
               ),
               Text(widget.title,
@@ -72,13 +75,15 @@ class _ExperienceOrEducationItemState extends State<ExperienceOrEducationItem> {
                       fontWeight: FontWeight.bold,
                       fontSize: isMobile
                           ? widget.size.width * 0.04
-                          : widget.size.width * 0.017)),
+                          : widget.size.width * 0.019)),
               Text(widget.locationOrPosition,
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: isMobile
                           ? widget.size.width * 0.03
-                          : widget.size.width * 0.012)),
+                          : isTablet
+                              ? widget.size.width * 0.016
+                              : widget.size.width * 0.012)),
             ],
           ),
         ),

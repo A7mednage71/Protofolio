@@ -39,7 +39,7 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
-                            fontSize: width * 0.03),
+                            fontSize: width * 0.05),
                       ),
                     ),
                     Text(
@@ -47,7 +47,7 @@ class MyWorkGridItemHoveredContainer extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w300,
-                          fontSize: width * 0.03),
+                          fontSize: width * 0.04),
                     ),
                   ],
                 ),
