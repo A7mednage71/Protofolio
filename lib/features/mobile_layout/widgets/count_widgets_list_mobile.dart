@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/dumy_lists.dart';
+import 'package:portfolio/core/constants/dumy_data.dart';
 import 'package:portfolio/features/widgets/count_widget.dart';
 
 class CountWidgetsListMobile extends StatelessWidget {
@@ -9,7 +9,7 @@ class CountWidgetsListMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: DumyLists.countItems
+      children: MyDummeyData.countItems
           .asMap()
           .entries
           .map((item) => Column(

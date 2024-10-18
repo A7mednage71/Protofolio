@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/dumy_lists.dart';
+import 'package:portfolio/core/constants/dumy_data.dart';
 import 'package:portfolio/features/widgets/count_widget.dart';
 
 class CountWidgetsList extends StatelessWidget {
@@ -11,12 +11,12 @@ class CountWidgetsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: DumyLists.countItems
+      children: MyDummeyData.countItems
           .asMap()
           .entries
           .map((item) => Padding(
                 padding: EdgeInsets.only(
-                  right: item.key == DumyLists.countItems.length - 1
+                  right: item.key == MyDummeyData.countItems.length - 1
                       ? size.width * 0.07
                       : 0,
                   left: item.key == 0 ? size.width * 0.07 : 0,

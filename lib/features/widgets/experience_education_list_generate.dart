@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/dumy_lists.dart';
+import 'package:portfolio/core/constants/dumy_data.dart';
 import 'package:portfolio/features/widgets/experience_or_education_item.dart';
 
 class EducationList extends StatelessWidget {
@@ -9,7 +9,7 @@ class EducationList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        children: DumyLists.educationList.asMap().entries.map((item) {
+        children: MyDummeyData.educationList.asMap().entries.map((item) {
       return Padding(
         padding: EdgeInsets.only(bottom: size.height * 0.04),
         child: ExperienceOrEducationItem(
@@ -31,7 +31,7 @@ class ExperienceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        children: DumyLists.experienceList.asMap().entries.map((item) {
+        children: MyDummeyData.experienceList.asMap().entries.map((item) {
       return Padding(
         padding: EdgeInsets.only(bottom: size.height * 0.04),
         child: ExperienceOrEducationItem(

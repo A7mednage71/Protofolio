@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/dumy_lists.dart';
+import 'package:portfolio/core/constants/dumy_data.dart';
 import 'package:portfolio/core/constants/size_config.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/features/widgets/my_recent_work_grid_view.dart';
@@ -69,15 +69,15 @@ class _MyRecentWorksTabBarState extends State<MyRecentWorksTabBar>
               controller: _tabController,
               children: [
                 MyRecentWorkGridView(
-                    works: DumyLists.myRecentWorks, size: widget.size),
+                    works: MyDummeyData.myRecentWorks, size: widget.size),
                 MyRecentWorkGridView(works: const [], size: widget.size),
                 MyRecentWorkGridView(
-                    works: DumyLists.myRecentWorks
+                    works: MyDummeyData.myRecentWorks
                         .where((e) => e.type == "Apps")
                         .toList(),
                     size: widget.size),
                 MyRecentWorkGridView(
-                    works: DumyLists.myRecentWorks
+                    works: MyDummeyData.myRecentWorks
                         .where((e) => e.type == "Web Development")
                         .toList(),
                     size: widget.size),

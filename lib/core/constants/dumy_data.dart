@@ -5,7 +5,17 @@ import 'package:portfolio/core/models/recent_work_model.dart';
 import 'package:portfolio/core/models/skill_model.dart';
 import 'package:portfolio/core/utils/app_assets.dart';
 
-class DumyLists {
+class MyDummeyData {
+  static const String cvLink =
+      "https://drive.google.com/file/d/1yPnvpDJW1NKM-TaCt1orC6RJSvOabNrb/view?usp=sharing";
+  static const String githubLink =
+      "https://github.com/A7mednage71?tab=repositories";
+  static const String facebookLink =
+      "https://www.facebook.com/profile.php?id=100038174362263";
+  static const String linkedinLink =
+      "https://www.linkedin.com/in/ahmed-nageh-0b941a223/";
+  static const String emailLink = "https://ahmdnajkh71@gmail.com";
+
   static List<CountWidgetModel> countItems = [
     CountWidgetModel(
         topText: "Years of", bottomText: "Experience", value: "14"),

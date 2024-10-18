@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/dumy_lists.dart';
+import 'package:portfolio/core/constants/dumy_data.dart';
 import 'package:portfolio/features/widgets/skill_item_tablet.dart';
 
 class SkillMobileGrid extends StatelessWidget {
@@ -15,11 +15,11 @@ class SkillMobileGrid extends StatelessWidget {
         crossAxisSpacing: size.width * 0.01,
         mainAxisSpacing: size.width * 0.02,
       ),
-      itemCount: DumyLists.mySkills.length,
+      itemCount: MyDummeyData.mySkills.length,
       itemBuilder: (context, index) {
         return SkillItemTablet(
           size: size,
-          skill: DumyLists.mySkills[index],
+          skill: MyDummeyData.mySkills[index],
         );
       },
     );

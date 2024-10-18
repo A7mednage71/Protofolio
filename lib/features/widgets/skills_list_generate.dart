@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/dumy_lists.dart';
+import 'package:portfolio/core/constants/dumy_data.dart';
 import 'package:portfolio/features/widgets/skill_item.dart';
 import 'package:portfolio/features/widgets/skill_item_tablet.dart';
 
@@ -15,7 +15,7 @@ class SkillsListGenerate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: DumyLists.mySkills.asMap().entries.map((item) {
+        children: MyDummeyData.mySkills.asMap().entries.map((item) {
           return Padding(
             padding: const EdgeInsets.all(10.0),
             child: SkillItem(
@@ -39,7 +39,7 @@ class SkillsTabletListGenerate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: DumyLists.mySkills.asMap().entries.map((item) {
+        children: MyDummeyData.mySkills.asMap().entries.map((item) {
           return Padding(
             padding: const EdgeInsets.all(10.0),
             child: SkillItemTablet(
@@ -50,4 +50,3 @@ class SkillsTabletListGenerate extends StatelessWidget {
         }).toList());
   }
 }
-
