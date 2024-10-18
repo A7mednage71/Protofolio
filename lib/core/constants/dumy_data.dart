@@ -14,7 +14,7 @@ class MyDummeyData {
       "https://www.facebook.com/profile.php?id=100038174362263";
   static const String linkedinLink =
       "https://www.linkedin.com/in/ahmed-nageh-0b941a223/";
-  static const String emailLink = "https://ahmdnajkh71@gmail.com";
+  static const String twitterLink = "https://x.com/Ahmed_Ben_Nageh";
 
   static List<CountWidgetModel> countItems = [
     CountWidgetModel(topText: "Years of", bottomText: "Experience", value: "2"),

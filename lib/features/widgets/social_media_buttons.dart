@@ -14,8 +14,10 @@ class SocialMediaButtons extends StatelessWidget {
             icon: FontAwesomeIcons.facebookF, url: MyDummeyData.facebookLink),
         SocialIconWidget(
             icon: FontAwesomeIcons.linkedin, url: MyDummeyData.linkedinLink),
-        SocialIconWidget(icon: FontAwesomeIcons.envelope , url: MyDummeyData.emailLink),
-        SocialIconWidget(icon: FontAwesomeIcons.github , url: MyDummeyData.githubLink),
+        SocialIconWidget(
+            icon: FontAwesomeIcons.twitter, url: MyDummeyData.twitterLink),
+        SocialIconWidget(
+            icon: FontAwesomeIcons.github, url: MyDummeyData.githubLink),
       ],
     );
   }
