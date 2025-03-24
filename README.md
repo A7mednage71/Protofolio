@@ -27,11 +27,11 @@ Ensure you have the following installed:
 ### Steps to Run the Project
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-portfolio.git
+   git clone https://github.com/A7mednage71/Protofolio.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd your-portfolio
+   cd Protofolio
    ```
 3. Install dependencies:
    ```bash
@@ -54,7 +54,5 @@ This project is licensed under the MIT License.
 
 ## Contact 📩
 For any queries, reach out via:
-- **Email**: your-email@example.com
-- **LinkedIn**: [Your Profile](https://www.linkedin.com/in/yourprofile)
-- **GitHub**: [Your GitHub](https://github.com/yourusername)
-
+- **Email**: ahmdnajkh71@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/ahmed-nageh-0b941a223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
